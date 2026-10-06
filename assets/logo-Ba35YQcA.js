@@ -1,0 +1,1 @@
+var e=`/clarivana.org/assets/logo-iVwvnHdE.png`;export{e as t};
