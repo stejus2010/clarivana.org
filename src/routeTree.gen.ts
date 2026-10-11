@@ -10,33 +10,154 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AllergiesRouteImport } from './routes/allergies'
+import { Route as ChatRouteImport } from './routes/chat'
+import { Route as HistoryRouteImport } from './routes/history'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as PremiumRouteImport } from './routes/premium'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as ScanRouteImport } from './routes/scan'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as SmartScanRouteImport } from './routes/smart-scan'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AllergiesRoute = AllergiesRouteImport.update({
+  id: '/allergies',
+  path: '/allergies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChatRoute = ChatRouteImport.update({
+  id: '/chat',
+  path: '/chat',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryRoute = HistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PremiumRoute = PremiumRouteImport.update({
+  id: '/premium',
+  path: '/premium',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ScanRoute = ScanRouteImport.update({
+  id: '/scan',
+  path: '/scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmartScanRoute = SmartScanRouteImport.update({
+  id: '/smart-scan',
+  path: '/smart-scan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/allergies': typeof AllergiesRoute
+  '/chat': typeof ChatRoute
+  '/history': typeof HistoryRoute
+  '/login': typeof LoginRoute
+  '/premium': typeof PremiumRoute
+  '/profile': typeof ProfileRoute
+  '/scan': typeof ScanRoute
+  '/signup': typeof SignupRoute
+  '/smart-scan': typeof SmartScanRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/allergies': typeof AllergiesRoute
+  '/chat': typeof ChatRoute
+  '/history': typeof HistoryRoute
+  '/login': typeof LoginRoute
+  '/premium': typeof PremiumRoute
+  '/profile': typeof ProfileRoute
+  '/scan': typeof ScanRoute
+  '/signup': typeof SignupRoute
+  '/smart-scan': typeof SmartScanRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/allergies': typeof AllergiesRoute
+  '/chat': typeof ChatRoute
+  '/history': typeof HistoryRoute
+  '/login': typeof LoginRoute
+  '/premium': typeof PremiumRoute
+  '/profile': typeof ProfileRoute
+  '/scan': typeof ScanRoute
+  '/signup': typeof SignupRoute
+  '/smart-scan': typeof SmartScanRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/allergies'
+    | '/chat'
+    | '/history'
+    | '/login'
+    | '/premium'
+    | '/profile'
+    | '/scan'
+    | '/signup'
+    | '/smart-scan'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/allergies'
+    | '/chat'
+    | '/history'
+    | '/login'
+    | '/premium'
+    | '/profile'
+    | '/scan'
+    | '/signup'
+    | '/smart-scan'
+  id:
+    | '__root__'
+    | '/'
+    | '/allergies'
+    | '/chat'
+    | '/history'
+    | '/login'
+    | '/premium'
+    | '/profile'
+    | '/scan'
+    | '/signup'
+    | '/smart-scan'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AllergiesRoute: typeof AllergiesRoute
+  ChatRoute: typeof ChatRoute
+  HistoryRoute: typeof HistoryRoute
+  LoginRoute: typeof LoginRoute
+  PremiumRoute: typeof PremiumRoute
+  ProfileRoute: typeof ProfileRoute
+  ScanRoute: typeof ScanRoute
+  SignupRoute: typeof SignupRoute
+  SmartScanRoute: typeof SmartScanRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +169,83 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/allergies': {
+      id: '/allergies'
+      path: '/allergies'
+      fullPath: '/allergies'
+      preLoaderRoute: typeof AllergiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chat': {
+      id: '/chat'
+      path: '/chat'
+      fullPath: '/chat'
+      preLoaderRoute: typeof ChatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history': {
+      id: '/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof HistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/premium': {
+      id: '/premium'
+      path: '/premium'
+      fullPath: '/premium'
+      preLoaderRoute: typeof PremiumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/scan': {
+      id: '/scan'
+      path: '/scan'
+      fullPath: '/scan'
+      preLoaderRoute: typeof ScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smart-scan': {
+      id: '/smart-scan'
+      path: '/smart-scan'
+      fullPath: '/smart-scan'
+      preLoaderRoute: typeof SmartScanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AllergiesRoute: AllergiesRoute,
+  ChatRoute: ChatRoute,
+  HistoryRoute: HistoryRoute,
+  LoginRoute: LoginRoute,
+  PremiumRoute: PremiumRoute,
+  ProfileRoute: ProfileRoute,
+  ScanRoute: ScanRoute,
+  SignupRoute: SignupRoute,
+  SmartScanRoute: SmartScanRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
